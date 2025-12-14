@@ -19,10 +19,10 @@ export default function LandingPage() {
       
       {/* Navbar */}
       <nav className="sticky top-0 z-50 w-full border-b border-black/5 dark:border-white/10 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-primary">
-            <div className="h-6 w-6 rounded-md bg-primary flex items-center justify-center text-white">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+        <div className="container mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+          <div className="flex items-center gap-1.5 sm:gap-2 font-bold text-lg sm:text-xl tracking-tight text-primary">
+            <div className="h-5 w-5 sm:h-6 sm:w-6 rounded-md bg-primary flex items-center justify-center text-white flex-shrink-0">
+              <svg width="10" height="10" className="sm:w-3 sm:h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
@@ -35,11 +35,11 @@ export default function LandingPage() {
             <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Button 
               onClick={() => setIsModalOpen(true)}
               size="sm" 
-              className="rounded-full px-4 h-9 font-medium bg-primary text-white hover:bg-primary/90 shadow-sm"
+              className="rounded-full px-3 sm:px-4 h-8 sm:h-9 text-xs sm:text-sm font-medium bg-primary text-white hover:bg-primary/90 shadow-sm"
             >
               Get Started
             </Button>
@@ -48,8 +48,8 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden bg-background">
-        <div className="container mx-auto px-6">
+      <section className="pt-16 sm:pt-24 pb-12 sm:pb-20 md:pt-32 md:pb-24 overflow-hidden bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border mb-8">
@@ -57,28 +57,28 @@ export default function LandingPage() {
               <span className="text-xs font-medium text-muted-foreground">Founded by former Visa employees</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-4 sm:mb-6 leading-[1.1]">
               Empowering freelancers & creators. <br className="hidden md:block" />
               <span className="text-muted-foreground">Receive, grow, and spend.</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-10 px-2 sm:px-0">
               Get paid in USD/EUR, instantly convert to stablecoins, and earn <span className="text-foreground font-semibold">4.2% APY</span> on your idle funds.
             </p>
 
             {/* Value Prop Highlight - 0.5% Fee */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
-              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
-                <Check className="h-4 w-4 text-green-600" />
-                <span className="text-sm font-medium text-foreground">Flat 0.5% Fee</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-10 px-2 sm:px-0">
+              <div className="flex items-center gap-2 sm:gap-3 bg-secondary/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-border w-full sm:w-auto justify-center">
+                <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-green-600 flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-foreground">Flat 0.5% Fee</span>
               </div>
-              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
-                <Shield className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">Bank-grade Security</span>
+              <div className="flex items-center gap-2 sm:gap-3 bg-secondary/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-border w-full sm:w-auto justify-center">
+                <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-foreground">Bank-grade Security</span>
               </div>
-              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
-                <Globe className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">Registered MSB with FinCEN</span>
+              <div className="flex items-center gap-2 sm:gap-3 bg-secondary/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-border w-full sm:w-auto justify-center">
+                <Globe className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-medium text-foreground">Registered MSB with FinCEN</span>
               </div>
             </div>
             
@@ -114,69 +114,69 @@ export default function LandingPage() {
           </div>
 
           {/* Hero Visual - Focused Product Shot */}
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-0">
             
-            <div className="rounded-xl border border-border bg-white dark:bg-gray-900 shadow-xl overflow-hidden">
+            <div className="rounded-lg sm:rounded-xl border border-border bg-white dark:bg-gray-900 shadow-xl overflow-hidden">
               {/* Browser Bar */}
-              <div className="h-10 border-b bg-gray-50/50 dark:bg-gray-800/50 flex items-center px-4 gap-2">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-gray-200" />
-                  <div className="w-3 h-3 rounded-full bg-gray-200" />
-                  <div className="w-3 h-3 rounded-full bg-gray-200" />
+              <div className="h-8 sm:h-10 border-b bg-gray-50/50 dark:bg-gray-800/50 flex items-center px-3 sm:px-4 gap-2">
+                <div className="flex gap-1 sm:gap-1.5">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gray-200" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gray-200" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-gray-200" />
                 </div>
-                <div className="ml-4 flex items-center gap-2 text-xs text-muted-foreground bg-white dark:bg-gray-900 px-3 py-1 rounded-md border shadow-sm">
-                  <Shield className="h-3 w-3" />
-                  dattapay.com/dashboard
+                <div className="ml-2 sm:ml-4 flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-muted-foreground bg-white dark:bg-gray-900 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md border shadow-sm overflow-hidden">
+                  <Shield className="h-2.5 w-2.5 sm:h-3 sm:w-3 flex-shrink-0" />
+                  <span className="truncate">dattapay.com/dashboard</span>
                 </div>
               </div>
 
               {/* Dashboard Content */}
-              <div className="p-6 md:p-8 grid md:grid-cols-3 gap-6 md:gap-8 bg-background">
+              <div className="p-4 sm:p-6 md:p-8 grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 bg-background">
                 {/* Left Column: Balance & Actions */}
-                <div className="md:col-span-2 space-y-6">
-                  <div className="flex items-center justify-between">
+                <div className="md:col-span-2 space-y-4 sm:space-y-6">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
                     <div>
-                       <h3 className="text-lg font-semibold">Overview</h3>
-                       <p className="text-sm text-muted-foreground">Welcome back, Mateo</p>
+                       <h3 className="text-base sm:text-lg font-semibold">Overview</h3>
+                       <p className="text-xs sm:text-sm text-muted-foreground">Welcome back, Mateo</p>
                     </div>
-                    <Button variant="outline" size="sm" className="rounded-full h-8 text-xs">
+                    <Button variant="outline" size="sm" className="rounded-full h-8 text-xs w-full sm:w-auto">
                       <CreditCard className="mr-2 h-3 w-3" /> Manage Cards
                     </Button>
                   </div>
                   
                   <BalanceCard />
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl border bg-card/50 hover:bg-card transition-colors">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="p-3 sm:p-4 rounded-xl border bg-card/50 hover:bg-card transition-colors">
                       <div className="flex items-center gap-2 mb-2 text-muted-foreground">
                         <TrendingUp className="h-4 w-4" />
-                        <span className="text-sm font-medium">Yield</span>
+                        <span className="text-xs sm:text-sm font-medium">Yield</span>
                       </div>
-                      <div className="text-2xl font-bold text-green-600">+$423.15</div>
+                      <div className="text-xl sm:text-2xl font-bold text-green-600">+$423.15</div>
                       <div className="text-xs text-muted-foreground mt-1">+12% vs last month</div>
                     </div>
-                    <div className="p-4 rounded-xl border bg-card/50 hover:bg-card transition-colors">
+                    <div className="p-3 sm:p-4 rounded-xl border bg-card/50 hover:bg-card transition-colors">
                       <div className="flex items-center gap-2 mb-2 text-muted-foreground">
                         <Wallet className="h-4 w-4" />
-                        <span className="text-sm font-medium">Next Payout</span>
+                        <span className="text-xs sm:text-sm font-medium">Next Payout</span>
                       </div>
-                      <div className="text-2xl font-bold">Tomorrow</div>
+                      <div className="text-xl sm:text-2xl font-bold">Tomorrow</div>
                       <div className="text-xs text-muted-foreground mt-1">Est. $1,250.00</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column: Stats & Yield */}
-                <div className="md:col-span-1 space-y-6">
+                <div className="md:col-span-1 space-y-4 sm:space-y-6">
                    <YieldChart />
                    
-                   <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="h-8 w-8 rounded-full bg-background shadow-sm flex items-center justify-center text-primary border">
-                          <Zap className="h-4 w-4" />
+                   <div className="p-3 sm:p-4 rounded-xl bg-primary/5 border border-primary/10">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-3">
+                        <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-full bg-background shadow-sm flex items-center justify-center text-primary border flex-shrink-0">
+                          <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                         </div>
-                        <div>
-                          <div className="font-semibold text-sm">Auto-Staking</div>
+                        <div className="min-w-0">
+                          <div className="font-semibold text-xs sm:text-sm">Auto-Staking</div>
                           <div className="text-xs text-green-600 font-medium">4.2% APY Active</div>
                         </div>
                       </div>

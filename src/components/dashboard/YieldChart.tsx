@@ -13,11 +13,11 @@ const data = [
 export function YieldChart() {
   return (
     <Card className="col-span-2 lg:col-span-1 shadow-sm border-border/50">
-      <CardHeader>
-        <CardTitle className="text-sm font-medium text-muted-foreground">Balance Growth</CardTitle>
+      <CardHeader className="px-4 sm:px-6 pt-4 sm:pt-6">
+        <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">Balance Growth</CardTitle>
       </CardHeader>
-      <CardContent>
-        <div className="h-[200px] w-full">
+      <CardContent className="px-4 sm:px-6 pb-4 sm:pb-6">
+        <div className="h-[180px] sm:h-[200px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={data}>
               <defs>
@@ -29,19 +29,20 @@ export function YieldChart() {
               <XAxis 
                 dataKey="date" 
                 stroke="#888888" 
-                fontSize={12} 
+                fontSize={10}
                 tickLine={false} 
                 axisLine={false} 
               />
               <YAxis 
                 stroke="#888888" 
-                fontSize={12} 
+                fontSize={10}
                 tickLine={false} 
                 axisLine={false} 
                 tickFormatter={(value: number) => `$${value}`} 
+                width={35}
               />
               <Tooltip 
-                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', fontSize: '12px' }}
               />
               <Area 
                 type="monotone" 
@@ -54,7 +55,7 @@ export function YieldChart() {
             </AreaChart>
           </ResponsiveContainer>
         </div>
-        <div className="mt-4 flex items-center justify-between text-sm">
+        <div className="mt-3 sm:mt-4 flex items-center justify-between text-xs sm:text-sm">
           <div className="text-muted-foreground">
             Projected annual yield
           </div>
