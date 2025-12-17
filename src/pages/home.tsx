@@ -425,7 +425,7 @@ export default function LandingPage() {
           </div>
           
           <div className="text-sm text-muted-foreground">
-            © 2025 DattaPay Inc. All rights reserved.
+            Negentropy LLC. All rights reserved.
           </div>
           
           <div className="flex gap-6 text-sm text-muted-foreground">
